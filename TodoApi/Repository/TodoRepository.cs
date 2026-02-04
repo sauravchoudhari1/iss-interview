@@ -1,13 +1,14 @@
 ﻿using TodoApi.Models.Domain;
 
-namespace TodoApi.Services
+namespace TodoApi.Repository
 {
-    public interface ITodoService
+    public interface ITodoRepository
     {
-        Task<Todo> CreateAsync(Todo todo);
+        Task<Todo> AddAsync(Todo todo);
         Task<IEnumerable<Todo>> GetAllAsync();
         Task<Todo?> GetByIdAsync(Guid id);
         Task<Todo?> UpdateAsync(Guid id, Todo todo);
         Task<Todo?> DeleteAsync(Guid id);
     }
+
 }
